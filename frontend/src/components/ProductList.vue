@@ -1,68 +1,5 @@
 <template>
   <div>
-    <div class="banner">
-      <br />
-
-      <form class="form" method="post" action="action.php">
-        <label for="vname">Vorname:</label><br />
-        <input
-          type="text"
-          id="vname"
-          name="vname"
-          value=""
-          required
-        /><br /><br />
-        <label for="nname">Nach name:</label><br />
-        <input
-          type="text"
-          id="nname"
-          name="nname"
-          value=""
-          required
-        /><br /><br />
-        <label for="nname">Email:</label><br />
-        <input
-          type="text"
-          id="email"
-          name="email"
-          value=""
-          required
-        /><br /><br />
-        <label for="nameschmetterling">Name des Schmetterlings:</label><br />
-
-        <select name="nameschmetterling" id="nameschmetterling" required>
-          <option value="distelfalter">Distelfalter</option>
-          <option value="zitronenfalter">Zitronenfalter</option>
-          <option value="taubenschwaenzchen">Taubenschwänzchen</option>
-          <option value="admiral">Admiral</option>
-          <option value="aurorafalter">Aurorafalter</option>
-          <option value="tagpfauenauge">Tagpfauenauge</option></select
-        ><br /><br />
-
-        <label for="locationschmetterling"
-          >Wo hast du den Schmetterling gesichtet:</label
-        ><br />
-        <input
-          type="text"
-          id="locationschmetterling"
-          name="locationschmetterling"
-          value=""
-        /><br /><br />
-        <label for="beschrschmetterling">Beschreibung des Schmetterlings:</label
-        ><br />
-        <textarea
-          id="beschrschmetterling"
-          name="beschrschmetterling"
-        ></textarea>
-        <br />
-        <br />
-
-        <input type="submit" value="Submit" />
-      </form>
-
-      <div class="banner__text">Schmeterlige in der Schweiz</div>
-    </div>
-
     <section id="results" class="results__wrapper">
       <ul class="results">
         <li class="result" v-for="item in items" :key="item.ID">
@@ -87,9 +24,7 @@
               </li>
               <li class="result-meta__item">
                 <img class="result-meta__icon" src="icons/star.svg" />
-                <p class="result-meta__name">
-                  {{ item.SBeschreibung }}
-                </p>
+                <p class="result-meta__name">{{ item.SBeschreibung }}</p>
               </li>
             </ul>
           </div>
@@ -140,4 +75,53 @@ export default {
 </script>
  
 <style>
+.results__wrapper {
+backdrop-filter: blur(15px);
+}
+
+.results {
+	display: block;
+	padding: 100px 0;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.result {
+	display: flex;
+	list-style: none;
+	margin: 0 0 50px 0;
+}
+
+.result__image-wrapper {
+	flex: 1;
+}
+
+.result__image {
+	border-radius: 40px;
+	width: 100%;
+}
+
+.result__info {
+	flex: 1;
+	padding: 0 0 0 50px;
+}
+
+.result-meta {
+	display: block;
+	padding: 0;
+}
+
+.result-meta__item {
+	display: flex;
+	list-style: none;
+}
+
+.result-meta__icon {
+	padding: 0 10px 10px 0;
+	width: 40px;
+}
+
+.result-meta__name {
+
+}
 </style>

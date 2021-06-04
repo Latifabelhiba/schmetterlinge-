@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container is-max-desktop">
-  
     <header class="header">
         <img class="header__logo" src="icons/butterfly.svg" alt="logo">
 
@@ -25,8 +24,6 @@ export default {
  
  
 <style>
-/* import style bulma */
-@import "~bulma/css/bulma.css";
 html,body {
 margin:0;
 font-family: Helvetica, sans-serif;
@@ -127,57 +124,6 @@ position: relative;
     top:0;
     width:0;
     height:0;
-
-}
-
-.results__wrapper {
-	background: black;
-	color: white;
-}
-
-.results {
-	display: block;
-	padding: 100px 0;
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.result {
-	display: flex;
-	list-style: none;
-	margin: 0 0 50px 0;
-}
-
-.result__image-wrapper {
-	flex: 1;
-}
-
-.result__image {
-	border-radius: 40px;
-	width: 100%;
-}
-
-.result__info {
-	flex: 1;
-	padding: 0 0 0 50px;
-}
-
-.result-meta {
-	display: block;
-	padding: 0;
-}
-
-.result-meta__item {
-	display: flex;
-	list-style: none;
-}
-
-.result-meta__icon {
-	padding: 0 10px 10px 0;
-	width: 40px;
-}
-
-.result-meta__name {
 
 }
 </style>
