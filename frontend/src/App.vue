@@ -34,7 +34,7 @@ font-family: Helvetica, sans-serif;
 }
 
 body {
-  background-image: url("images/hintergrund.jpg");
+  background-image: url("/images/hintergrund.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
